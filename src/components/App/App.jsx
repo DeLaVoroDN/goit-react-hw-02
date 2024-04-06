@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import Description from "./Description/Description";
-import Options from "./Option/Options";
-import Notification from "./Notification/Notification";
-import FeedBack from "./FeedBack/FeedBack";
+import Description from "../Description/Description";
+import Options from "../Option/Options";
+import Notification from "../Notification/Notification";
+import FeedBack from "../FeedBack/FeedBack";
+import styles from "./App.module.css";
 
 export default function App() {
   const [obj, setObj] = useState(() => {
@@ -27,10 +28,10 @@ export default function App() {
 
   const totalFeedback = obj.good + obj.neutral + obj.bad;
   const positiveFeedbackPercentage =
-    totalFeedback > 0 ? Math.round((obj.good / (obj.good + obj.bad)) * 100) : 0;
+    totalFeedback > 0 ? Math.round((obj.good / (obj.good + obj.neutral + obj.bad)) * 100) : 0;
 
   return (
-    <div>
+    <div className={styles.container}>
       <Description />
       <Options
         updateFeedback={updateFeedback}

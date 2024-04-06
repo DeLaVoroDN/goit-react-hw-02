@@ -1,0 +1,25 @@
+
+.button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #f8f8f8;
+}
+
+.resetButton {
+  border-color: #000;
+  font-weight: bold;
+}
+
+.button:not(:last-child) {
+  margin-right: 8px;
+}
