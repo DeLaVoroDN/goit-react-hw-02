@@ -47,7 +47,7 @@ export default function App() {
           positiveFeedbackPercentage={positiveFeedbackPercentage}
         />
       ) : (
-        <Notification message="No feedback given" />
+        <Notification message="No feedback yet" />
       )}
     </div>
   );
